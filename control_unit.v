@@ -165,23 +165,28 @@ module Control_Unit (
                 memory_to_reg = 0;
             end
             JAL_EXEC: begin
-                pc_write = 1;
-                pc_source = 1;
+            pc_write = 1;
+            pc_source = 1;
+            alu_src_a = 2'b10; // usar PC como entrada da ALU
+            alu_src_b = 2'b01; // somar 4 (endereço de retorno)
             end
             JAL_WB: begin
                 reg_write = 1;
                 memory_to_reg = 0;
             end
             JALR_EXEC: begin
-                alu_src_a = 2'b01;
-                alu_src_b = 2'b10;
-                aluop = 2'b00;
-                is_immediate = 1;
+            alu_src_a = 2'b01;       // rs1
+            alu_src_b = 2'b10;       // imediato
+            aluop = 2'b00;
+            is_immediate = 1;        // ← corrigido
             end
             JALR_WB: begin
-                pc_write = 1;
-                pc_source = 0;
-                reg_write = 1;
+            pc_write = 1;
+            pc_source = 1;
+            reg_write = 0;           // ← corrigido
+            alu_src_a = 2'b10;
+            alu_src_b = 2'b01;
+            is_immediate = 0;
             end
             AUIPC_EXEC: begin
                 alu_src_a = 2'b10;

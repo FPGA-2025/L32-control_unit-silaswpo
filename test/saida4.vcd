@@ -1,5 +1,5 @@
 $date
-	Wed Jul 23 17:08:13 2025
+	Fri Jul 25 21:54:33 2025
 $end
 $version
 	Icarus Verilog
@@ -225,10 +225,10 @@ b1 H
 #7000
 1$
 1#
-b0 ,
-b0 h
-b0 -
-b0 g
+b1 ,
+b1 h
+b10 -
+b10 g
 b10001 j
 b1101 k
 18
@@ -240,6 +240,10 @@ b1 :
 b10 H
 #9000
 1!
+b0 ,
+b0 h
+b0 -
+b0 g
 0$
 0#
 b0 j

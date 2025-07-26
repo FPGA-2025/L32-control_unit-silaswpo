@@ -8,7 +8,7 @@ opcode = 103 pc_write = 0 ir_write = 0 pc_source = 0 reg_write = 0 memory_read =
  Esperado:
 opcode = 103 pc_write = 0 ir_write = 0 pc_source = 0 reg_write = 0 memory_read = 0 is_immediate = 0 memory_write = 0 pc_write_cond = 0 lorD = 0 memory_to_reg = 0 aluop = 0 alu_src_a = 1 alu_src_b = 2
 === ERRO Ciclo na FSM =           3
-opcode = 103 pc_write = 1 ir_write = 0 pc_source = 0 reg_write = 1 memory_read = 0 is_immediate = 0 memory_write = 0 pc_write_cond = 0 lorD = 0 memory_to_reg = 0 aluop = 0 alu_src_a = 0 alu_src_b = 0
+opcode = 103 pc_write = 1 ir_write = 0 pc_source = 1 reg_write = 0 memory_read = 0 is_immediate = 0 memory_write = 0 pc_write_cond = 0 lorD = 0 memory_to_reg = 0 aluop = 0 alu_src_a = 2 alu_src_b = 1
  Esperado:
 opcode = 103 pc_write = 1 ir_write = 0 pc_source = 1 reg_write = 0 memory_read = 0 is_immediate = 1 memory_write = 0 pc_write_cond = 0 lorD = 0 memory_to_reg = 0 aluop = 0 alu_src_a = 2 alu_src_b = 1
 === ERRO Ciclo na FSM =           4
